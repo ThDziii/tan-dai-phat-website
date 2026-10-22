@@ -1,0 +1,177 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-white);
+  border-bottom: 1px solid #F1F5F9;
+  transition: all var(--transition-normal);
+}
+
+.header--scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-bottom-color: transparent;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+/* Logo */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.header__logo-img {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.header__logo:hover .header__logo-img {
+  transform: scale(1.05);
+}
+
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-name {
+  font-size: var(--font-size-lg);
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
+
+.header__logo-slogan {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Nav */
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.header__nav-link {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+  padding: var(--space-2) 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.header__nav-link:hover {
+  color: var(--color-primary);
+}
+
+.header__nav-link--active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.header__nav-indicator {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Mobile Toggle (Hamburger) - Mặc định ẩn trên Desktop */
+.header__mobile-toggle {
+  display: none;
+  color: var(--color-navy);
+  padding: var(--space-2);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.header__mobile-toggle:hover {
+  background-color: #F1F5F9;
+}
+
+/* Responsive: Ẩn thanh menu desktop và hiển thị nút Hamburger trên Mobile/Tablet */
+@media (max-width: 1024px) {
+  .header__nav.hide-on-mobile,
+  .header__action.hide-on-mobile {
+    display: none !important;
+  }
+
+  .header__mobile-toggle {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header__mobile-toggle {
+    display: none !important;
+  }
+
+  .header__mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Mobile Menu */
+.header__mobile-menu {
+  background-color: var(--color-white);
+  padding: var(--space-4) 0 var(--space-6);
+  border-top: 1px solid #F1F5F9;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.header__mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.header__mobile-nav-link {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-navy);
+  padding: var(--space-2) 0;
+}
+
+.header__mobile-nav-link--active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

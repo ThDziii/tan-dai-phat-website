@@ -1,0 +1,112 @@
+.routes-section {
+  background-color: var(--color-process-bg);
+  padding: 0 0 var(--space-20);
+}
+
+.routes__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-8) var(--space-4);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Points */
+.routes__point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.routes__pin-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(215, 25, 32, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(215, 25, 32, 0.2);
+}
+
+.routes__city-name {
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  color: var(--color-navy);
+  white-space: nowrap;
+}
+
+/* Track Visual */
+.routes__track-container {
+  position: relative;
+  flex-grow: 1;
+  height: 120px;
+  margin: 0 var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.routes__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mini Truck in Center */
+.routes__truck-anchor {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: truckFloat 3s ease-in-out infinite alternate;
+}
+
+.routes__mini-truck {
+  width: 110px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.routes__badge {
+  margin-top: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  box-shadow: 0 2px 6px rgba(215, 25, 32, 0.25);
+  white-space: nowrap;
+}
+
+@keyframes truckFloat {
+  0% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .routes__card {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .routes__track-container {
+    width: 100%;
+    margin: var(--space-2) 0;
+  }
+}

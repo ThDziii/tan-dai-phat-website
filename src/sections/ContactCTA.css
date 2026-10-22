@@ -1,0 +1,159 @@
+.contact-cta {
+  padding: var(--space-12) 0 var(--space-20);
+  background-color: var(--color-white);
+}
+
+.contact-cta__card {
+  position: relative;
+  background: linear-gradient(135deg, #FDF0E6 0%, #FBE4D2 100%);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  padding: var(--space-12) var(--space-10);
+  box-shadow: 0 8px 30px rgba(36, 54, 79, 0.05);
+  border: 1px solid rgba(253, 224, 71, 0.2);
+}
+
+/* Scenery */
+.contact-cta__scenery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.contact-cta__sun {
+  position: absolute;
+  top: 20px;
+  right: 18%;
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, #FDE68A 0%, #F59E0B 100%);
+  opacity: 0.6;
+}
+
+.contact-cta__cloud {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-full);
+}
+
+.contact-cta__cloud--1 {
+  top: 25px;
+  right: 28%;
+  width: 90px;
+  height: 24px;
+}
+
+.contact-cta__cloud--2 {
+  top: 45px;
+  right: 8%;
+  width: 70px;
+  height: 20px;
+}
+
+.contact-cta__hill {
+  position: absolute;
+  bottom: -20px;
+  right: -5%;
+  width: 55%;
+  height: 140px;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(180deg, #F4CBB2 0%, #EAA886 100%);
+  opacity: 0.45;
+}
+
+.contact-cta__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+/* Content */
+.contact-cta__tag {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.contact-cta__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  color: var(--color-navy);
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-4);
+}
+
+.contact-cta__title--highlight {
+  color: var(--color-primary);
+}
+
+.contact-cta__desc {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  max-width: 480px;
+}
+
+.contact-cta__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Visual */
+.contact-cta__visual {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.contact-cta__truck-wrapper {
+  width: 100%;
+  max-width: 540px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+}
+
+.contact-cta__truck-svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .contact-cta__card {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .contact-cta__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .contact-cta__visual {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-cta__actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+.section-title {
+  margin-bottom: var(--space-10);
+  max-width: 680px;
+}
+
+.section-title--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-title--right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.section-title__eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.section-title__heading {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-3);
+}
+
+.section-title__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Light Theme for Dark/Red background sections */
+.section-title--light .section-title__eyebrow {
+  color: #FFA3A7;
+}
+
+.section-title--light .section-title__heading {
+  color: var(--color-white);
+}
+
+.section-title--light .section-title__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-title__heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section-title__subtitle {
+    font-size: var(--font-size-sm);
+  }
+}

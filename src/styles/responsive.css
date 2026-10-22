@@ -1,0 +1,49 @@
+/* Responsive Breakpoints & Utilities */
+
+/* Mobile Phones (default: < 640px) */
+
+/* Small Tablets / Large Phones */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+    --space-20: 3.5rem;
+    --space-16: 2.75rem;
+    --space-12: 2rem;
+  }
+
+  .section {
+    padding: var(--space-16) 0;
+  }
+}
+
+/* Tablet (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+}
+
+/* Desktop (> 1024px) */
+@media (min-width: 1025px) {
+  :root {
+    --container-padding: 1.5rem;
+  }
+}
+
+/* Hide / Show Utilities */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .show-on-mobile {
+    display: block !important;
+  }
+}
