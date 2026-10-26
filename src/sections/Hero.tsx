@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, ShieldCheck, Clock, Headphones, MapPin, Truck, CheckCircle2, Phone } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Clock, Headphones, MapPin, Truck } from 'lucide-react';
 import { Container } from '../components/layout/Container';
 import { Button } from '../components/ui/Button';
 import { COMPANY_DATA, ROUTE_INFO } from '../data/company';
