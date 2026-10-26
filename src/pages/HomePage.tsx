@@ -2,7 +2,7 @@ import React from 'react';
 import { Hero } from '../sections/Hero';
 import { Services } from '../sections/Services';
 import { Process } from '../sections/Process';
-import { Routes } from '../sections/Routes';
+import { RealActivities } from '../sections/RealActivities';
 import { Benefits } from '../sections/Benefits';
 import { ContactCTA } from '../sections/ContactCTA';
 
@@ -12,7 +12,7 @@ export const HomePage: React.FC = () => {
       <Hero />
       <Services />
       <Process />
-      <Routes />
+      <RealActivities />
       <Benefits />
       <ContactCTA />
     </div>

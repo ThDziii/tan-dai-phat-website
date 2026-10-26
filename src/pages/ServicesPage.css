@@ -207,6 +207,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .service-detail-card,
   .service-detail-card--reverse {
     grid-template-columns: 1fr;

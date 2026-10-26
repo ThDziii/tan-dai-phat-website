@@ -117,6 +117,7 @@
 
 /* Responsive: Ẩn thanh menu desktop và hiển thị nút Hamburger trên Mobile/Tablet */
 @media (max-width: 1024px) {
+
   .header__nav.hide-on-mobile,
   .header__action.hide-on-mobile {
     display: none !important;
@@ -170,6 +171,7 @@
     opacity: 0;
     transform: translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
