@@ -5,6 +5,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { id: 'about', label: 'Về chúng tôi', href: '/about' },
   { id: 'services', label: 'Dịch vụ', href: '/services' },
   { id: 'gallery', label: 'Hình ảnh hoạt động', href: '/gallery' },
+  { id: 'blog', label: 'Tin tức', href: '/blog' },
   { id: 'contact', label: 'Liên hệ', href: '/contact' },
 ];
 
@@ -19,5 +20,6 @@ export const FOOTER_DISCOVER_LINKS = [
   { label: 'Về chúng tôi', href: '/about' },
   { label: 'Dịch vụ vận tải', href: '/services' },
   { label: 'Hình ảnh hoạt động', href: '/gallery' },
+  { label: 'Tin tức', href: '/blog' },
   { label: 'Liên hệ & Kho bãi', href: '/contact' },
 ];
