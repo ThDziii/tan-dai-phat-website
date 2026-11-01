@@ -126,44 +126,53 @@ export const AboutPage: React.FC = () => {
         <Container>
           <SectionTitle
             eyebrow="HÌNH ẢNH THỰC TẾ"
-            title="Đội xe, Bãi xe & Đội ngũ nhân sự"
+            title="Bãi xe, kho hàng và đội ngũ giao nhận"
             subtitle="Các hoạt động vận hành thường nhật của Tân Đại Phát tại hai đầu Bắc - Nam."
             align="center"
           />
 
           <div className="about-activities__grid">
             <div className="activity-card">
-              <div className="activity-card__photo-placeholder">
-                <div className="activity-card__badge">[Ảnh thực tế dàn xe tải đường dài]</div>
+              <div className="activity-card__photo">
+                <img
+                  src="/images/gallery/bai-xe-tap-ket.jpg"
+                  alt="Bãi tập kết xe máy và xe tải dưới mái che"
+                />
               </div>
               <div className="activity-card__body">
-                <h3 className="activity-card__title">Đội xe tải đời mới</h3>
+                <h3 className="activity-card__title">Bãi tập kết xuất bến</h3>
                 <p className="activity-card__desc">
-                  Dàn xe tải thùng kín, bạt mui từ 5 đến 20 tấn được kiểm tra kỹ thuật định kỳ trước mỗi chuyến đi.
+                  Xe máy được xếp sẵn dưới mái che, cạnh xe thùng bạt trước khi lên đường.
                 </p>
               </div>
             </div>
 
             <div className="activity-card">
-              <div className="activity-card__photo-placeholder">
-                <div className="activity-card__badge">[Ảnh thực tế kho bãi tập kết Hà Nội & TP.HCM]</div>
+              <div className="activity-card__photo">
+                <img
+                  src="/images/gallery/kho-xe-da-boc.jpg"
+                  alt="Xe máy đã bọc nilon trong kho có mái che"
+                />
               </div>
               <div className="activity-card__body">
-                <h3 className="activity-card__title">Hệ thống kho bãi hai đầu</h3>
+                <h3 className="activity-card__title">Kho bảo quản có mái che</h3>
                 <p className="activity-card__desc">
-                  Kho bãi rộng rãi, trang bị đầy đủ xe nâng, mái che và camera an ninh 24/7 bảo vệ hàng hóa tuyệt đối.
+                  Xe và hàng hóa được bọc kín, xếp trong kho mái che để tránh mưa nắng trước khi giao nhận.
                 </p>
               </div>
             </div>
 
             <div className="activity-card">
-              <div className="activity-card__photo-placeholder">
-                <div className="activity-card__badge">[Ảnh thực tế nhân viên đóng gói & xếp dỡ]</div>
+              <div className="activity-card__photo">
+                <img
+                  src="/images/gallery/boc-xe-may.jpg"
+                  alt="Nhân viên bọc xốp và kiểm tra xe máy"
+                />
               </div>
               <div className="activity-card__body">
-                <h3 className="activity-card__title">Đội ngũ bốc xếp tận tâm</h3>
+                <h3 className="activity-card__title">Bọc lót và kiểm tra xe máy</h3>
                 <p className="activity-card__desc">
-                  Quy trình xếp hàng khoa học, phân chia hàng nặng dưới, hàng nhẹ trên, chằng buộc chống xô lệch.
+                  Nhân viên bọc xốp nổ và kiểm tra từng xe trước khi xếp lên thùng xe.
                 </p>
               </div>
             </div>

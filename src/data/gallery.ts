@@ -2,74 +2,59 @@ import type { GalleryItem } from '../types';
 
 export const GALLERY_CATEGORIES = [
   { id: 'all', label: 'Tất cả hình ảnh' },
-  { id: 'fleet', label: 'Đội xe tải' },
   { id: 'warehouse', label: 'Kho bãi tập kết' },
   { id: 'operation', label: 'Hoạt động giao nhận' },
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'fleet-1',
-    category: 'fleet',
-    categoryLabel: 'Đội xe tải',
-    title: 'Dàn xe tải thùng kín Tân Đại Phát sẵn sàng xuất bến',
-    description: 'Hệ thống xe tải đời mới từ 5 tấn đến 20 tấn đầu trắng thùng đỏ thương hiệu Tân Đại Phát.',
-    placeholderBadge: 'Ảnh thực tế đội xe tải đường dài - Cần thay ảnh thật',
-  },
-  {
-    id: 'warehouse-1',
+    id: 'warehouse-yard',
     category: 'warehouse',
     categoryLabel: 'Kho bãi tập kết',
-    title: 'Bãi tập kết hàng hóa đầu cầu Hà Nội',
-    description: 'Khu vực bãi xe rộng rãi, thuận tiện cho các phương tiện trung chuyển ra vào bốc dỡ.',
-    placeholderBadge: 'Ảnh thực tế kho bãi Hà Nội - Cần thay ảnh thật',
+    title: 'Bãi xe và xe tải tập kết dưới mái che',
+    description:
+      'Xe máy được xếp hàng sẵn sàng xuất bến cạnh xe thùng bạt tại bãi tập kết của Tân Đại Phát.',
+    imageUrl: '/images/gallery/bai-xe-tap-ket.jpg',
+    imageAlt: 'Dãy xe máy và xe tải thùng bạt tập kết dưới mái che',
   },
   {
-    id: 'operation-1',
-    category: 'operation',
-    categoryLabel: 'Hoạt động giao nhận',
-    title: 'Công tác chằng buộc và cố định xe máy',
-    description: 'Nhân viên Tân Đại Phát bao bọc xốp nổ và chằng đai dù chuyên dụng an toàn.',
-    placeholderBadge: 'Ảnh thực tế bọc và chằng buộc xe máy - Cần thay ảnh thật',
-  },
-  {
-    id: 'fleet-2',
-    category: 'fleet',
-    categoryLabel: 'Đội xe tải',
-    title: 'Xe tải kiểm tra kỹ thuật trước khi khởi hành',
-    description: 'Quy trình kiểm tra lốp, phanh, máy móc định kỳ nghiêm ngặt trước mỗi chuyến đi xuyên Việt.',
-    placeholderBadge: 'Ảnh thực tế bảo dưỡng & kiểm tra xe - Cần thay ảnh thật',
-  },
-  {
-    id: 'warehouse-2',
+    id: 'warehouse-wrapped',
     category: 'warehouse',
     categoryLabel: 'Kho bãi tập kết',
-    title: 'Kho trung chuyển hàng hóa tại TP. Hồ Chí Minh',
-    description: 'Kho lưu trữ có mái che, bảo quản hàng khô ráo, trang bị camera an ninh 24/24.',
-    placeholderBadge: 'Ảnh thực tế kho bãi TP.HCM - Cần thay ảnh thật',
+    title: 'Kho bảo quản xe máy đã bọc nilon',
+    description:
+      'Xe máy được bọc nilon nhiều màu, xếp trong kho có mái che cùng hàng hóa khác trước khi lên xe.',
+    imageUrl: '/images/gallery/kho-xe-da-boc.jpg',
+    imageAlt: 'Xe máy bọc nilon hồng, vàng, trắng trong kho có mái che',
   },
   {
-    id: 'operation-2',
+    id: 'operation-wrap',
     category: 'operation',
     categoryLabel: 'Hoạt động giao nhận',
-    title: 'Kiểm đếm và phân loại kiện hàng trước khi lên xe',
-    description: 'Nhân sự đối soát vận đơn, dán tem mã hàng để đảm bảo giao đúng nơi, đúng người nhận.',
-    placeholderBadge: 'Ảnh thực tế kiểm đếm hàng hóa - Cần thay ảnh thật',
+    title: 'Bọc xốp và kiểm tra xe máy trước khi lên xe',
+    description:
+      'Nhân viên Tân Đại Phát bọc xốp nổ và kiểm tra từng xe máy để hạn chế trầy xước khi vận chuyển.',
+    imageUrl: '/images/gallery/boc-xe-may.jpg',
+    imageAlt: 'Nhân viên kiểm tra xe máy đã bọc xốp nổ trong kho',
   },
   {
-    id: 'fleet-3',
-    category: 'fleet',
-    categoryLabel: 'Đội xe tải',
-    title: 'Chuyến xe Tân Đại Phát lăn bánh trên Quốc lộ 1A',
-    description: 'Hình ảnh xe lăn bánh trên cung đường Bắc - Nam kết nối giao thương giữa các tỉnh thành.',
-    placeholderBadge: 'Ảnh thực tế xe tải trên đường trường - Cần thay ảnh thật',
-  },
-  {
-    id: 'operation-3',
+    id: 'operation-count',
     category: 'operation',
     categoryLabel: 'Hoạt động giao nhận',
-    title: 'Bàn giao hàng tận nơi cho khách hàng doanh nghiệp',
-    description: 'Đội ngũ giao hàng tận tình, hỗ trợ khách hàng ký nhận và nghiệm thu biên bản bàn giao.',
-    placeholderBadge: 'Ảnh thực tế bàn giao hàng tận nơi - Cần thay ảnh thật',
+    title: 'Đối soát chứng từ và kiểm đếm hàng hóa',
+    description:
+      'Nhân viên đối chiếu vận đơn ngay tại kho, cạnh các kiện hàng tiêu dùng đã xếp pallet.',
+    imageUrl: '/images/gallery/kiem-dem-hang.jpg',
+    imageAlt: 'Nhân viên kiểm chứng từ bên các thùng cháo Tổ Yến',
+  },
+  {
+    id: 'operation-load',
+    category: 'operation',
+    categoryLabel: 'Hoạt động giao nhận',
+    title: 'Xếp xe máy lên xe tải xuất bến',
+    description:
+      'Đội ngũ xếp xe máy lên thùng xe, chuẩn bị chuyến vận chuyển từ bãi tập kết.',
+    imageUrl: '/images/gallery/xep-xe-len-xe.jpg',
+    imageAlt: 'Nhân viên xếp xe máy trắng lên xe tải tại bãi',
   },
 ];

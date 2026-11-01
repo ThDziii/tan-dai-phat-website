@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, MapPin, Truck, Building2, PackageCheck, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
+import { ShieldCheck, MapPin, Truck, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 import { Container } from '../components/layout/Container';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { COMPANY_DATA } from '../data/company';
@@ -90,12 +90,12 @@ export const RealActivities: React.FC = () => {
 
         {/* 2. Three Operational Pillars (Fleet, Warehouse, Operations) */}
         <div className="real-activities__grid">
-          {/* Item 1: Đội xe tải đường dài */}
+          {/* Item 1: Bãi tập kết */}
           <div className="activity-item-card">
             <div className="activity-item-card__photo-box">
               <img
-                src="/images/fleet-depot.jpg"
-                alt="Dàn xe tải đường dài Tân Đại Phát"
+                src="/images/gallery/bai-xe-tap-ket.jpg"
+                alt="Bãi tập kết xe máy và xe tải dưới mái che"
                 className="activity-item-card__real-img"
               />
               <div className="activity-item-card__live-indicator">
@@ -105,16 +105,15 @@ export const RealActivities: React.FC = () => {
             </div>
 
             <div className="activity-item-card__content">
-              <span className="activity-item-card__category">PHƯƠNG TIỆN VẬN TẢI</span>
-              <h4 className="activity-item-card__title">Đội xe tải đường dài 5T – 20T</h4>
+              <span className="activity-item-card__category">BÃI TẬP KẾT</span>
+              <h4 className="activity-item-card__title">Xe máy và xe tải sẵn sàng xuất bến</h4>
               <p className="activity-item-card__desc">
-                Hệ thống xe tải thùng kín bảo ôn và bạt mui đời mới, kiểm tra kỹ thuật nghiêm ngặt
-                trước mỗi chuyến đi xuyên Việt trên Quốc lộ 1A.
+                Hàng xe máy được xếp dưới mái che, cạnh xe thùng bạt trước mỗi chuyến đi.
               </p>
               <ul className="activity-item-card__list">
-                <li>✓ Xe xuất bến đều đặn 7 ngày trong tuần</li>
-                <li>✓ Giám sát định vị GPS lộ trình 24/7</li>
-                <li>✓ Tải trọng đa dạng từ 5 tấn đến 20 tấn</li>
+                <li>✓ Bãi có mái che, xe ra vào thuận tiện</li>
+                <li>✓ Xe máy xếp hàng chờ lên thùng</li>
+                <li>✓ Xe tải tập kết ngay tại bãi</li>
               </ul>
             </div>
           </div>
@@ -122,17 +121,11 @@ export const RealActivities: React.FC = () => {
           {/* Item 2: Kho bãi tập kết */}
           <div className="activity-item-card">
             <div className="activity-item-card__photo-box">
-              <div className="activity-item-card__placeholder">
-                <div className="activity-item-card__icon-circle">
-                  <Building2 size={22} />
-                </div>
-                <span className="activity-item-card__badge-tag">
-                  [Vị trí ảnh thực tế: Bãi xe & kho hàng hai đầu]
-                </span>
-                <span className="activity-item-card__hint">
-                  Kho TP.HCM (709 Lê Thị Riêng)
-                </span>
-              </div>
+              <img
+                src="/images/gallery/kho-xe-da-boc.jpg"
+                alt="Xe máy đã bọc nilon trong kho mái che"
+                className="activity-item-card__real-img"
+              />
               <div className="activity-item-card__live-indicator">
                 <span className="activity-item-card__dot" />
                 <span>Mở cửa 24/7</span>
@@ -141,15 +134,14 @@ export const RealActivities: React.FC = () => {
 
             <div className="activity-item-card__content">
               <span className="activity-item-card__category">CƠ SỞ VẬT CHẤT</span>
-              <h4 className="activity-item-card__title">Kho bãi tập kết hai đầu Bắc – Nam</h4>
+              <h4 className="activity-item-card__title">Kho bảo quản xe và hàng hóa</h4>
               <p className="activity-item-card__desc">
-                Mặt bằng bãi xe rộng rãi, thuận tiện xe container và xe tải lớn ra vào quay đầu,
-                trang bị xe nâng hạ hàng nặng và camera an ninh 24/24.
+                Xe máy được bọc nilon và xếp trong kho mái che, cùng hàng tiêu dùng chờ lên xe.
               </p>
               <ul className="activity-item-card__list">
-                <li>✓ Kho có mái che bảo quản hàng khô ráo</li>
-                <li>✓ Trang bị xe nâng hạ hàng hóa chuyên dụng</li>
-                <li>✓ Điểm trung chuyển thuận tiện giao nhận</li>
+                <li>✓ Kho có mái che, hàng khô ráo</li>
+                <li>✓ Xe máy bọc kín trước khi xuất</li>
+                <li>✓ Hàng hóa xếp riêng, dễ kiểm đếm</li>
               </ul>
             </div>
           </div>
@@ -157,17 +149,11 @@ export const RealActivities: React.FC = () => {
           {/* Item 3: Đóng gói và giao nhận */}
           <div className="activity-item-card">
             <div className="activity-item-card__photo-box">
-              <div className="activity-item-card__placeholder">
-                <div className="activity-item-card__icon-circle">
-                  <PackageCheck size={22} />
-                </div>
-                <span className="activity-item-card__badge-tag">
-                  [Vị trí ảnh thực tế: Bọc xe máy & bốc xếp hàng]
-                </span>
-                <span className="activity-item-card__hint">
-                  Bọc xốp nổ 3 lớp, chằng buộc tăng đơ dù
-                </span>
-              </div>
+              <img
+                src="/images/gallery/boc-xe-may.jpg"
+                alt="Nhân viên bọc xốp và kiểm tra xe máy"
+                className="activity-item-card__real-img"
+              />
               <div className="activity-item-card__live-indicator">
                 <span className="activity-item-card__dot" />
                 <span>Cẩn trọng tuyệt đối</span>
@@ -178,13 +164,12 @@ export const RealActivities: React.FC = () => {
               <span className="activity-item-card__category">QUY TRÌNH GIAO NHẬN</span>
               <h4 className="activity-item-card__title">Đóng gói bọc lót & kiểm đếm tận tâm</h4>
               <p className="activity-item-card__desc">
-                Nhân viên cẩn thận bọc màng xốp nổ 3 lớp cho xe máy, rút xăng phòng cháy chữa cháy,
-                đối soát tem nhãn mã hàng và ký nhận biên bản đầy đủ.
+                Nhân viên bọc xốp nổ cho xe máy và đối soát chứng từ ngay tại kho trước khi xếp hàng lên xe.
               </p>
               <ul className="activity-item-card__list">
-                <li>✓ Bọc xốp nổ + bìa carton chống trầy xước</li>
-                <li>✓ Dán tem mã vận đơn chính xác từng kiện</li>
-                <li>✓ Giao nhận tận nơi theo yêu cầu của khách</li>
+                <li>✓ Bọc xốp nổ chống trầy xước</li>
+                <li>✓ Kiểm tra xe trước khi lên thùng</li>
+                <li>✓ Đối chiếu vận đơn từng kiện hàng</li>
               </ul>
             </div>
           </div>

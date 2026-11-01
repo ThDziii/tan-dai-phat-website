@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { X, ZoomIn, Truck, Building2, Package, Phone, ArrowRight } from 'lucide-react';
+import { X, ZoomIn, Phone, ArrowRight } from 'lucide-react';
 import { Container } from '../components/layout/Container';
 import { Button } from '../components/ui/Button';
 import { GALLERY_CATEGORIES, GALLERY_ITEMS } from '../data/gallery';
@@ -28,19 +28,6 @@ export const GalleryPage: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const renderCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'fleet':
-        return <Truck size={14} />;
-      case 'warehouse':
-        return <Building2 size={14} />;
-      case 'operation':
-        return <Package size={14} />;
-      default:
-        return null;
-    }
-  };
-
   return (
     <div className="gallery-page">
       {/* 1. Page Hero Banner */}
@@ -49,7 +36,7 @@ export const GalleryPage: React.FC = () => {
           <div className="page-hero__content">
             <span className="page-hero__eyebrow">HÌNH ẢNH HOẠT ĐỘNG THỰC TẾ</span>
             <h1 className="page-hero__title">
-              Thư Viện <span className="text-primary">Đội Xe & Kho Bãi</span>
+              Thư Viện <span className="text-primary">Kho Bãi & Giao Nhận</span>
             </h1>
             <p className="page-hero__desc">
               Ghi nhận các hoạt động thực tế từ khâu tiếp nhận, bảo quản, đóng gói chằng buộc
@@ -91,18 +78,16 @@ export const GalleryPage: React.FC = () => {
                   }
                 }}
               >
-                {/* Visual Placeholder Box */}
                 <div className="gallery-card__thumb">
-                  <div className="gallery-card__placeholder-content">
-                    <div className="gallery-card__category-icon">
-                      {renderCategoryIcon(item.category)}
-                    </div>
-                    <span className="gallery-card__badge">{item.placeholderBadge}</span>
-                    <span className="gallery-card__zoom-hint">
-                      <ZoomIn size={16} />
-                      <span>Nhấn để xem lớn</span>
-                    </span>
-                  </div>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.imageAlt}
+                    className="gallery-card__image"
+                  />
+                  <span className="gallery-card__zoom-hint">
+                    <ZoomIn size={16} />
+                    <span>Nhấn để xem lớn</span>
+                  </span>
                 </div>
 
                 {/* Card Meta */}
@@ -140,9 +125,11 @@ export const GalleryPage: React.FC = () => {
 
             {/* Large Preview Area */}
             <div className="gallery-modal__preview">
-              <div className="gallery-modal__badge">
-                {selectedItem.placeholderBadge}
-              </div>
+              <img
+                src={selectedItem.imageUrl}
+                alt={selectedItem.imageAlt}
+                className="gallery-modal__image"
+              />
             </div>
 
             {/* Information */}
@@ -150,10 +137,6 @@ export const GalleryPage: React.FC = () => {
               <span className="gallery-modal__category">{selectedItem.categoryLabel}</span>
               <h2 className="gallery-modal__title">{selectedItem.title}</h2>
               <p className="gallery-modal__desc">{selectedItem.description}</p>
-              <div className="gallery-modal__note">
-                * Vị trí khung ảnh chuẩn bị sẵn. Khi bạn cung cấp file ảnh thực tế từ bãi xe,
-                hệ thống sẽ tự động hiển thị hình ảnh gốc độ phân giải cao tại đây.
-              </div>
             </div>
           </div>
         </div>

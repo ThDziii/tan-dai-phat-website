@@ -99,8 +99,8 @@ export const Hero: React.FC = () => {
               {/* Main Real Company Photo: Dàn xe tải & bãi xe thực tế */}
               <div className="hero__photo-container">
                 <img
-                  src="/images/fleet-depot.jpg"
-                  alt="Dàn xe tải đường dài và bãi tập kết thực tế Công ty Vận Tải Tân Đại Phát"
+                  src="/images/gallery/bai-xe-tap-ket.jpg"
+                  alt="Bãi tập kết xe máy và xe tải Tân Đại Phát"
                   className="hero__real-img"
                 />
 
@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
                   />
                   <div className="hero__badge-info">
                     <strong className="hero__badge-brand">TÂN ĐẠI PHÁT</strong>
-                    <span className="hero__badge-sub">ĐỘI XE & BÃI TẬP KẾT THỰC TẾ</span>
+                    <span className="hero__badge-sub">BÃI TẬP KẾT THỰC TẾ</span>
                   </div>
                 </div>
 

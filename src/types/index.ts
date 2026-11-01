@@ -62,10 +62,10 @@ export interface DirectorInfo {
 
 export interface GalleryItem {
   id: string;
-  category: 'fleet' | 'warehouse' | 'operation';
+  category: 'warehouse' | 'operation';
   categoryLabel: string;
   title: string;
   description: string;
-  placeholderBadge: string;
-  aspectRatio?: 'landscape' | 'portrait' | 'square';
+  imageUrl: string;
+  imageAlt: string;
 }
