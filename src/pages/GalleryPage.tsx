@@ -36,7 +36,7 @@ export const GalleryPage: React.FC = () => {
           <div className="page-hero__content">
             <span className="page-hero__eyebrow">HÌNH ẢNH HOẠT ĐỘNG THỰC TẾ</span>
             <h1 className="page-hero__title">
-              Thư Viện <span className="text-primary">Kho Bãi & Giao Nhận</span>
+              Thư Viện <span className="text-primary">Đội Xe & Kho Bãi</span>
             </h1>
             <p className="page-hero__desc">
               Ghi nhận các hoạt động thực tế từ khâu tiếp nhận, bảo quản, đóng gói chằng buộc

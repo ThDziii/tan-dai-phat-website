@@ -62,7 +62,7 @@ export interface DirectorInfo {
 
 export interface GalleryItem {
   id: string;
-  category: 'warehouse' | 'operation';
+  category: 'fleet' | 'warehouse' | 'operation';
   categoryLabel: string;
   title: string;
   description: string;

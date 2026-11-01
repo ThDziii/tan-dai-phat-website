@@ -2,11 +2,42 @@ import type { GalleryItem } from '../types';
 
 export const GALLERY_CATEGORIES = [
   { id: 'all', label: 'Tất cả hình ảnh' },
+  { id: 'fleet', label: 'Đội xe & xe nâng' },
   { id: 'warehouse', label: 'Kho bãi tập kết' },
   { id: 'operation', label: 'Hoạt động giao nhận' },
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'fleet-office',
+    category: 'fleet',
+    categoryLabel: 'Đội xe & xe nâng',
+    title: 'Xe tải trước trụ sở Tân Đại Phát Logistics',
+    description:
+      'Xe tải đỗ ngay trước văn phòng kho bãi mang biển hiệu Tân Đại Phát Logistics, sẵn sàng nhận hàng xuất bến.',
+    imageUrl: '/images/gallery/tru-so-kho-bai.jpg',
+    imageAlt: 'Xe tải trắng trước trụ sở Tân Đại Phát Logistics',
+  },
+  {
+    id: 'fleet-forklift',
+    category: 'fleet',
+    categoryLabel: 'Đội xe & xe nâng',
+    title: 'Xe nâng làm việc giữa dàn xe tải',
+    description:
+      'Xe nâng Komatsu bốc xếp hàng giữa các xe thùng bạt và xe Hino tại bãi, trong khi xe bên cạnh đang chở xe máy.',
+    imageUrl: '/images/gallery/xe-nang-bai-xe.jpg',
+    imageAlt: 'Xe nâng hoạt động giữa các xe tải tại bãi Tân Đại Phát',
+  },
+  {
+    id: 'operation-coordinate',
+    category: 'operation',
+    categoryLabel: 'Hoạt động giao nhận',
+    title: 'Nhân viên điều phối xe máy trước khi lên xe',
+    description:
+      'Đội ngũ áo Tân Đại Phát tập kết xe máy trắng, phối hợp xếp lên thùng xe ngay tại bãi.',
+    imageUrl: '/images/gallery/dieu-phoi-xep-xe.jpg',
+    imageAlt: 'Nhân viên Tân Đại Phát đứng giữa dãy xe máy và xe tải đang xếp hàng',
+  },
   {
     id: 'warehouse-yard',
     category: 'warehouse',
