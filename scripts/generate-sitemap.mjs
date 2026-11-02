@@ -1,15 +1,12 @@
-import { readFileSync, writeFileSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import path from 'node:path'
 
 const SITE_URL = 'https://vantaitandaiphat.com.vn'
 const STATIC_PATHS = ['/', '/about', '/services', '/gallery', '/blog', '/contact']
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-
-function loadEnv(path) {
+function loadEnv(filePath) {
   const env = {}
-  const text = readFileSync(path, 'utf8')
+  const text = readFileSync(filePath, 'utf8')
   for (const line of text.split('\n')) {
     const trimmed = line.trim()
     if (!trimmed || trimmed.startsWith('#')) continue
@@ -40,7 +37,7 @@ async function fetchPublishedPosts(env) {
   const dataset = env.VITE_SANITY_DATASET || 'production'
   const apiVersion = env.VITE_SANITY_API_VERSION || '2025-02-19'
   if (!projectId) {
-    throw new Error('Missing VITE_SANITY_PROJECT_ID in .env')
+    throw new Error('Missing VITE_SANITY_PROJECT_ID')
   }
 
   const query = `*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && !(_id in path("drafts.**"))]{
@@ -65,11 +62,25 @@ function renderUrl({ loc, lastmod }) {
   return `  <url>\n    <loc>${escapeXml(loc)}</loc>${lastmodTag}\n  </url>`
 }
 
-const env = loadEnv(resolve(root, '.env'))
+function loadConfig() {
+  const fromFile = {}
+  const envPath = path.join(process.cwd(), '.env')
+  if (existsSync(envPath)) {
+    Object.assign(fromFile, loadEnv(envPath))
+  }
+
+  return {
+    VITE_SANITY_PROJECT_ID: process.env.VITE_SANITY_PROJECT_ID || fromFile.VITE_SANITY_PROJECT_ID,
+    VITE_SANITY_DATASET: process.env.VITE_SANITY_DATASET || fromFile.VITE_SANITY_DATASET,
+    VITE_SANITY_API_VERSION: process.env.VITE_SANITY_API_VERSION || fromFile.VITE_SANITY_API_VERSION,
+  }
+}
+
+const env = loadConfig()
 const posts = await fetchPublishedPosts(env)
 
-const urls = STATIC_PATHS.map((path) => ({
-  loc: path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`,
+const urls = STATIC_PATHS.map((pathname) => ({
+  loc: pathname === '/' ? `${SITE_URL}/` : `${SITE_URL}${pathname}`,
 }))
 
 const seen = new Set(urls.map((url) => url.loc))
@@ -87,5 +98,11 @@ ${urls.map(renderUrl).join('\n')}
 </urlset>
 `
 
-writeFileSync(resolve(root, 'public/sitemap.xml'), xml)
-console.log(`Wrote ${urls.length} URLs to public/sitemap.xml`)
+const publicDir = path.join(process.cwd(), 'public')
+if (!existsSync(publicDir)) {
+  mkdirSync(publicDir)
+}
+
+const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml')
+writeFileSync(sitemapPath, xml)
+console.log(`Wrote ${urls.length} URLs to ${sitemapPath}`)
